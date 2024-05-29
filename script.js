@@ -283,7 +283,10 @@ function download(file) {
     encodeURIComponent(document.documentElement.outerHTML);
 }
 
-document.getElementById("ref").innerHTML = document.getElementById("inv").innerHTML
+function updateref()
+{
+  document.getElementById("ref").innerHTML = document.getElementById("inv").innerHTML
+}
 
 //download
 function download(filename, text) {
