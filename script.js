@@ -27,7 +27,7 @@
 })(document);
 
 /* Prototyping
-/* ========================================================================== */
+========================================================================== */
 
 (function (window, ElementPrototype, ArrayPrototype, polyfill) {
   function NodeList() {
@@ -277,17 +277,10 @@ function onContentLoad() {
 window.addEventListener &&
   document.addEventListener("DOMContentLoaded", onContentLoad);
 
-function download(file) {
-  this.href =
-    "data:text/html;charset=UTF-8," +
-    encodeURIComponent(document.documentElement.outerHTML);
-}
-
 function updateref()
 {
-  document.getElementById("ref").innerHTML = document.getElementById("inv").innerHTML
+document.getElementById("ref").innerHTML = document.getElementById("inv").innerHTML
 }
-
 //download
 function download(filename, text) {
   var element = document.createElement("a");
