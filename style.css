@@ -65,6 +65,7 @@ header img { max-width: 300px; padding-right: 60px; }
 /* footer*/
 
 footer {background-color: #1446A0; padding: 1em; border-radius: 0.5em; color: white;}
+footer h1 {text-align: left; font-weight: bold; font-size: 25px}
 footer table th{font-weight: bold; text-align: left; font-size: 18px; padding-bottom: 2px;}
 footer table td {font-size: 18px;}
 
