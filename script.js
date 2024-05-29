@@ -257,6 +257,8 @@ function onContentLoad() {
 
     document.addEventListener("keydown", updateInvoice);
     document.addEventListener("keyup", updateInvoice);
+    document.addEventListener("keydown", updateref);
+    document.addEventListener("keyup", updateref);
 
     input.addEventListener("focus", onEnterCancel);
     input.addEventListener("mouseover", onEnterCancel);
