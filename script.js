@@ -87,9 +87,9 @@ function generateTableRow() {
   var emptyColumn = document.createElement("tr");
 
   emptyColumn.innerHTML =
-    '<td><a class="cut">-</a><span contenteditable></span></td>'  +
+    '<td><a class="cut">-</a><span contenteditable></span></td>' +
     "<td><span data-prefix>$</span><span contenteditable>0.00</span></td>" +
-    "<td><span contenteditable>0</span></td>" +
+    "<td><span contenteditable>1</span></td>" +
     "<td><span data-prefix>$</span><span>0.00</span></td>";
 
   return emptyColumn;
@@ -112,7 +112,7 @@ function updateNumber(e) {
     wasPrice =
       activeElement.innerHTML == parsePrice(parseFloatHTML(activeElement));
 
-  if (!isNaN(value) && (e.keyCode == 38 || e.keyCode == 40 || e.wheelDeltaY)) {
+  if (!isNaN(value) && (e.keyCode == 38 || e.keyCode == 40)) {
     e.preventDefault();
 
     value +=
@@ -166,9 +166,8 @@ function updateInvoice() {
   );
 
   // set total
-  cells[0].innerHTML = document.getElementById('payable').innerHTML = total;
+  cells[0].innerHTML = document.getElementById("payable").innerHTML = total;
 
- 
   // update prefix formatting
   // ========================
 
@@ -277,9 +276,10 @@ function onContentLoad() {
 window.addEventListener &&
   document.addEventListener("DOMContentLoaded", onContentLoad);
 
-function updateref()
-{
-document.getElementById("ref").innerHTML = document.getElementById("inv").innerHTML
+function updateref() {
+  document.getElementById("ref").innerHTML = document.getElementById(
+    "inv"
+  ).innerHTML;
 }
 //download
 function download(filename, text) {
@@ -303,13 +303,11 @@ document.getElementById("downloadbtn").addEventListener(
   "click",
   function () {
     var hh = document.querySelector("html").innerHTML;
-    var filename = document.getElementById("inv").innerHTML +
-      ".html";
+    var filename = document.getElementById("inv").innerHTML + ".html";
 
     download(filename, hh);
   },
   false
 );
 /* Date */
-document.getElementById('dat').valueAsDate = new Date();
-
+document.getElementById("dat").valueAsDate = new Date();
